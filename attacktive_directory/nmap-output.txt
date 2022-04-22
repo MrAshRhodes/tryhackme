@@ -1,0 +1,24 @@
+# Nmap 7.92 scan initiated Fri Apr 22 13:03:05 2022 as: nmap -vvv -Pn -sV -oN nmap-output.txt 10.10.204.84
+Nmap scan report for 10.10.204.84
+Host is up, received user-set (0.038s latency).
+Scanned at 2022-04-22 13:03:05 UTC for 11s
+Not shown: 987 closed tcp ports (reset)
+PORT     STATE SERVICE       REASON          VERSION
+53/tcp   open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp   open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+88/tcp   open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2022-04-22 13:03:13Z)
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: spookysec.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+464/tcp  open  kpasswd5?     syn-ack ttl 127
+593/tcp  open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped    syn-ack ttl 127
+3268/tcp open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: spookysec.local0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped    syn-ack ttl 127
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+Service Info: Host: ATTACKTIVEDIREC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 22 13:03:16 2022 -- 1 IP address (1 host up) scanned in 11.41 seconds
