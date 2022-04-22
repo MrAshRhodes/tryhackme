@@ -1,0 +1,69 @@
+# Nmap 7.92 scan initiated Fri Apr 22 13:04:37 2022 as: nmap -vvv -p 135,139,445,88,3389 -sC -sV -oN nmap-script-scan.txt 10.10.204.84
+Nmap scan report for 10.10.204.84
+Host is up, received reset ttl 127 (0.035s latency).
+Scanned at 2022-04-22 13:04:37 UTC for 17s
+
+PORT     STATE SERVICE       REASON          VERSION
+88/tcp   open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2022-04-22 13:04:43Z)
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: THM-AD
+|   NetBIOS_Domain_Name: THM-AD
+|   NetBIOS_Computer_Name: ATTACKTIVEDIREC
+|   DNS_Domain_Name: spookysec.local
+|   DNS_Computer_Name: AttacktiveDirectory.spookysec.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-04-22T13:04:46+00:00
+|_ssl-date: 2022-04-22T13:04:53+00:00; -1s from scanner time.
+| ssl-cert: Subject: commonName=AttacktiveDirectory.spookysec.local
+| Issuer: commonName=AttacktiveDirectory.spookysec.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-04-21T12:18:29
+| Not valid after:  2022-10-21T12:18:29
+| MD5:   2beb 8189 0709 bf36 b0d5 80bc c0fd e7e0
+| SHA-1: db1e 30c9 77ec cbf8 f7ae d54b f403 febe 3cfd 1260
+| -----BEGIN CERTIFICATE-----
+| MIIDCjCCAfKgAwIBAgIQGU8js7I3cIdPq3JnsjT1EzANBgkqhkiG9w0BAQsFADAu
+| MSwwKgYDVQQDEyNBdHRhY2t0aXZlRGlyZWN0b3J5LnNwb29reXNlYy5sb2NhbDAe
+| Fw0yMjA0MjExMjE4MjlaFw0yMjEwMjExMjE4MjlaMC4xLDAqBgNVBAMTI0F0dGFj
+| a3RpdmVEaXJlY3Rvcnkuc3Bvb2t5c2VjLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEA0gC8WB6Xa/J0GarwGlS/pV+Jh+YTQB1TdEACH66SwFPb
+| ModL5ZeWlwsxhGyvYfDCRw+H6gknLB32h7jufm3U8VL755xrybaNUNIypUob5tZH
+| PdALxy52DgPRGNryCH3/iQmhQbgU0zpPZX8kf4pPuA2M7UonVPYCU80r+914dpcs
+| Pz+aMi2KqybO2ozE7BdyF0sE2K49Sfo/v1mEPbLuBUZzPRQoEQatNUj6VJ6nSz28
+| ebMh+JLLmw+Ehx1irpquDS8OyK8EA+7SW7qIBRhNZuyBIFk3z3I13dcWpR6U0vPg
+| +lQwg96T8Dlriwx8WzmD3emYNIPMaKfj1A88C3fZXQIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAHTB
+| amzLzG2sLkyardDC/uQgVnmTCiOf86/dKxbb68KVsWZuZk1E0g3s3LTEoIuz2kcJ
+| MSTDzzyfVkRPxDPV9PhFqkau5XCUQ3wcJrKieqhrvLcDR/yb4Bo7OtN5kmWRfxki
+| hPpn/ceRNU5DND9XUkGxRqY11El59II8iEbxKNEERgYqfhz7UDz+K3dZ1k1iod9J
+| FDJ7jH8M8UvSSe1L+prOY9D760uyzg62wtaJt5yPkzYT/ODGqAlstOlGGWm5BmhN
+| D8LAsOwffxFjmW9EggLqNTpCAzi9EorfEJO240kqc2cXvjUiA7Hfd2vLCLrzs0p8
+| ocYTIPsfH8lqxkHzN9Q=
+|_-----END CERTIFICATE-----
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-04-22T13:04:49
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 49335/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 16471/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 51322/udp): CLEAN (Timeout)
+|   Check 4 (port 14807/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 22 13:04:54 2022 -- 1 IP address (1 host up) scanned in 17.18 seconds
