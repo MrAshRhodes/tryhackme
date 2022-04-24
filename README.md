@@ -1,5 +1,10 @@
 ## Basic notes for TryHackMe.com rooms and training.
 
+Explain shell has been great for learning.
+https://explainshell.com/
+
+paste an example of a command and it will tell you what the switches mean. Very handy.
+
 ### Enumeration Tools
 
 ## Nmap
