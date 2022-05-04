@@ -6,7 +6,9 @@ ipaddr=10.10.16.188
 ### Install kerbrute (task 2)
 
 1.) Download a precompiled binary for your OS - https://github.com/ropnop/kerbrute/releases
+
 2.) Rename kerbrute_linux_amd64 to kerbrute
+
 3.) chmod +x kerbrute - make kerbrute executable
 
 ### Install Impacket (task 4)
