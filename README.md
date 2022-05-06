@@ -54,6 +54,14 @@ connect to a share
 
 ```smbclient //$IP/$PATH -U '$USERNAME'```
 
+## Hydra - password crack
+
+Used in a few tryhackme rooms. 
+
+basic example for ssh
+
+```hydra -l jan -P /usr/share/wordlists/rockyou.txt $IP ssh'```
+
 # LinPeas
 https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
 
