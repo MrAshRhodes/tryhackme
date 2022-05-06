@@ -17,7 +17,7 @@ Scan hosts and ports
 
 basic examples
 
-```nmap $IP -vvv -Pn -sV -oN nmap-output.txt```
+```nmap $IP -vvv -Pn -sC -sV -oN nmap-output.txt```
 
 narrow it down to open ports.
 
